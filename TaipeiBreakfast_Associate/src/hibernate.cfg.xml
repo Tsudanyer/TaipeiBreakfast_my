@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory >
+  <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+  <property name="hibernate.connection.password">sa123456</property>
+  <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;DatabaseName=TaipeiBreakfast</property>
+  <property name="hibernate.connection.username">sa</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+  <mapping resource="model/bean/OrderSum.hbm.xml"/>
+  <mapping resource="model/bean/OrderDetail.hbm.xml"/>
+  <mapping resource="model/bean/Meal.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015/5/3 ?U?? 01:59:33 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.bean.OrderDetail" table="ORDERDETAIL">
+        <id name="OrderDetailID" type="int">
+            <column name="ORDERDETAILID" />
+            <generator class="assigned" />
+        </id>
+        <property name="MealID" type="int" insert="false" update="false">
+            <column name="MEALID" />
+        </property>
+        <property name="Count" type="int">
+            <column name="COUNT" />
+        </property>
+        <property name="Price" type="double">
+            <column name="PRICE" />
+        </property>
+        <property name="OrderSumID" type="int">
+            <column name="ORDERSUMID" />
+        </property>
+        <many-to-one name="Meal" class="model.bean.Meal" fetch="join">
+            <column name="MEALID" />
+        </many-to-one>
+<!--         <many-to-one name="OrderSum" class="model.bean.OrderSum" fetch="join"> -->
+<!--             <column name="ORDERSUM" /> -->
+<!--         </many-to-one> -->
+    </class>
+</hibernate-mapping>

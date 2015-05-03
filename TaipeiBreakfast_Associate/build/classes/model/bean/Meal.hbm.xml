@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015/5/3 ?U?? 03:15:39 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.bean.Meal" table="MEAL">
+        <id name="MealID" type="int">
+            <column name="MEALID" />
+            <generator class="native" />
+        </id>
+        <property name="MealName" type="java.lang.String">
+            <column name="MEALNAME" />
+        </property>
+        <property name="Price" type="double">
+            <column name="PRICE" />
+        </property>
+        <property name="ShopID" type="int">
+            <column name="SHOPID" />
+        </property>
+<!--         <primitive-array name="MealImage" table="MEAL"> -->
+<!--             <key> -->
+<!--                 <column name="MEALID" /> -->
+<!--             </key> -->
+<!--             <index></index> -->
+<!--             <element type="byte"> -->
+<!--                 <column name="MEALIMAGE" /> -->
+<!--             </element> -->
+<!--         </primitive-array> -->
+<!--         <property name="MealStatus" type="boolean"> -->
+<!--             <column name="MEALSTATUS" /> -->
+<!--         </property> -->
+<!--         <property name="MealKindID" type="int"> -->
+<!--             <column name="MEALKINDID" /> -->
+<!--         </property> -->
+<!--         <set name="Favorite" table="FAVORITE" inverse="false" lazy="true"> -->
+<!--             <key> -->
+<!--                 <column name="MEALID" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="model.bean.Favorite" /> -->
+<!--         </set> -->
+<!--         <many-to-one name="MealKindList" class="model.bean.MealKindList" fetch="join"> -->
+<!--             <column name="MEALKINDLIST" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="Shop" class="model.bean.Shop" fetch="join"> -->
+<!--             <column name="SHOP" /> -->
+<!--         </many-to-one> -->
+<!--         <set name="OrderDetail" table="ORDERDETAIL" inverse="false" lazy="true"> -->
+<!--             <key> -->
+<!--                 <column name="MEALID" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="model.bean.OrderDetail" /> -->
+<!--         </set> -->
+<!--         <set name="SpecialPrice" table="SPECIALPRICE" inverse="false" lazy="true"> -->
+<!--             <key> -->
+<!--                 <column name="MEALID" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="model.bean.SpecialPrice" /> -->
+<!--         </set> -->
+    </class>
+</hibernate-mapping>

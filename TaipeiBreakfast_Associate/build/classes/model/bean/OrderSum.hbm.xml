@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015/5/3 ?U?? 01:59:33 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.bean.OrderSum" table="ORDERSUM">
+        <id name="OrderSumID" type="int">
+            <column name="ORDERSUMID" />
+            <generator class="assigned" />
+        </id>
+        <property name="ShopID" type="int">
+            <column name="SHOPID" />
+        </property>
+        <property name="MemberID" type="int">
+            <column name="MEMBERID" />
+        </property>
+        <property name="TotalPrice" type="double">
+            <column name="TOTALPRICE" />
+        </property>
+        <property name="OrderTime" type="java.sql.Date">
+            <column name="ORDERTIME" />
+        </property>
+        <property name="ExpectTime" type="java.sql.Date">
+            <column name="EXPECTTIME" />
+        </property>
+        <property name="Memo" type="java.lang.String">
+            <column name="MEMO" />
+        </property>
+        <property name="StarsforOwn" type="int">
+            <column name="STARSFOROWN" />
+        </property>
+        <property name="evaluateforShop" type="java.lang.String">
+            <column name="EVALUATEFORSHOP" />
+        </property>
+        <property name="OrderCondID" type="int">
+            <column name="ORDERCONDID" />
+        </property>
+<!--         <many-to-one name="Member" class="model.bean.Member" fetch="join"> -->
+<!--             <column name="MEMBER" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="OrderCond" class="model.bean.OrderCond" fetch="join"> -->
+<!--             <column name="ORDERCOND" /> -->
+<!--         </many-to-one> -->
+        <set name="OrderDetail" table="ORDERDETAIL" inverse="false" lazy="true">
+            <key>
+                <column name="ORDERSUMID" />
+            </key>
+            <one-to-many class="model.bean.OrderDetail" />
+        </set>
+<!--         <many-to-one name="Shop" class="model.bean.Shop" fetch="join"> -->
+<!--             <column name="SHOP" /> -->
+<!--         </many-to-one> -->
+    </class>
+</hibernate-mapping>
