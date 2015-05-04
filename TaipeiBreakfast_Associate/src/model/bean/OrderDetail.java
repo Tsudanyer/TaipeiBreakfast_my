@@ -9,6 +9,8 @@ public class OrderDetail {
 
     public Meal Meal;
     public OrderSum OrderSum;
+	
+	
 	public int getOrderDetailID() {
 		return OrderDetailID;
 	}
